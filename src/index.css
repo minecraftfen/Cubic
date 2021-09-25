@@ -1,0 +1,61 @@
+:root,
+html,
+body,
+main {
+  margin: 0;
+  padding: 0;
+  max-width: 1000px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  --dpc: #ffeb3b;
+  --lpc:#fdd835;
+  --dbc:#1e1e1e;
+  --lbc:#eeeeee;
+  --ltc: #212121;
+  --dtc:#c9d4d4;
+  --ac: #607d8b;
+  --secondarytext: #757575;
+  --divider-color: #bdbdbd;
+}
+.dark{
+  --bgcolor:var(--dbc);
+  --primarycolor:var(--dpc);
+  --textcolor:var(--dtc);
+}
+.light{
+  --bgcolor:var(--lbc);
+  --primarycolor:var(--lpc);
+  --textcolor:var(--ltc);
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+main {
+  background: rgb(255, 248, 225);
+  background: radial-gradient(
+    circle,
+    rgba(255, 248, 225, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 14px 0 0 16px;
+  line-height: calc(100vh - 32px);
+  font-size: calc(100vh - 32px);
+  border-radius: 16px;
+  max-width: 984px;
+  max-height: 42px;
+}
+main:focus-visible{
+  outline: none;
+}
+[contenteditable="true"]:empty::before {
+  color: #757575FF;
+}
+[contenteditable="true"]::before {
+  content: attr(placeholder);
+  position: absolute;
+  color: #75757500;
+  transition: color 250ms;
+}
